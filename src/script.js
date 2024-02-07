@@ -59,3 +59,23 @@ for (const div of lorems) {
     }
 }
 
+const animals = [
+  "Hund",
+  "Katt",
+  "Kanin"
+];
+
+const div = document.createElement("div");
+
+const djurUl = docuement.createElement("ul");
+
+for (const animal of animals) {
+    const li = document.createElement("li");
+    li.innerText = animal;
+    // const a = document.createElement("a");
+    // li.appendChild(a);
+    djurUl.appendChild(li);
+}
+div.appendChild(animals);
+
+

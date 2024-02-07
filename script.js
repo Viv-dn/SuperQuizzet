@@ -33,6 +33,7 @@ foot.appendChild(ul);
 const myClassDivs = document.getElementsByClassName("myClass");
 
 console.log(myClassDivs);
+
 const firstHeader = document.createElement("h2");
 firstHeader.innerText = "Första";
 const secondHeader = document.createElement("h2");
@@ -53,3 +54,28 @@ myClassDivs[1].insertBefore(secondHeader, secondP);
 //     child.innerText = "Tjohoooo";
 //   }
 // }
+
+const animals = [
+  "Hund",
+  "Katt",
+  "Kanin"
+];
+
+const div = document.createElement("div");
+
+const djurUl = docuement.createElement("ul");
+
+for (const animal of animals) {
+    const li = document.createElement("li");
+    li.innerText = animal;
+    // const a = document.createElement("a");
+    // li.appendChild(a);
+    djurUl.appendChild(li);
+}
+div.appendChild(animals);
+
+const magiskLåda = document.getElementsByClassName("magisk-låda")[0];
+magiskLåda.addEventListener("mouseover", ()=>{});
+
+
+
