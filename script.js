@@ -11,10 +11,45 @@ const foot = document.getElementById("foot");
 
 console.log(foot.innerHTML);
 
-foot.innerHTML = `
-<ul>
-    <li><a href="http://google.com">Google</a></li>
-    <li><a href="http://w3schools.com">W3Schools</a></li>
-    <li><a href="http://youtube.com">YouTube</a></li>
-</ul>
-`;
+const links = [
+  "http://google.com",
+  "http://w3schools.com",
+  "http://youtube.com",
+  "https://iths.se",
+];
+
+const ul = document.createElement("ul");
+
+for (const link of links) {
+  const li = document.createElement("li");
+  const a = document.createElement("a");
+  a.href = link;
+  a.innerText = link;
+  li.appendChild(a);
+  ul.appendChild(li);
+}
+foot.appendChild(ul);
+
+const myClassDivs = document.getElementsByClassName("myClass");
+
+console.log(myClassDivs);
+const firstHeader = document.createElement("h2");
+firstHeader.innerText = "Första";
+const secondHeader = document.createElement("h2");
+secondHeader.innerText = "Andra";
+
+// myClassDivs[0].appendChild(firstHeader);
+// myClassDivs[1].appendChild(secondHeader);
+
+const firstP = myClassDivs[0].children[0];
+const secondP = myClassDivs[1].children[0];
+
+myClassDivs[0].insertBefore(firstHeader, firstP);
+myClassDivs[1].insertBefore(secondHeader, secondP);
+
+// for (const div of myClassDivs) {
+//   for (const child of div.children) {
+//     console.log(child);
+//     child.innerText = "Tjohoooo";
+//   }
+// }
