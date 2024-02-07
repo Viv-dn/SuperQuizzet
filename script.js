@@ -53,3 +53,34 @@ myClassDivs[1].insertBefore(secondHeader, secondP);
 //     child.innerText = "Tjohoooo";
 //   }
 // }
+
+const djurArr = ["Hund", "Katt", "Kanin"];
+
+const div = document.createElement("div");
+const djurLista = document.createElement("ul");
+
+for (const djur of djurArr) {
+  const li = document.createElement("li");
+  li.innerText = djur;
+  djurLista.appendChild(li);
+}
+
+div.appendChild(djurLista);
+
+console.log(div);
+
+document.body.children[1].insertBefore(div, myClassDivs[0]);
+
+const magiskLåda = document.getElementsByClassName("magisk-låda")[0];
+
+magiskLåda.addEventListener("mouseover", () => {
+  magiskLåda.classList.remove("magisk-låda-röd");
+  magiskLåda.classList.add("magisk-låda-grön");
+});
+
+magiskLåda.addEventListener("mouseout", () => {
+  magiskLåda.classList.remove("magisk-låda-grön");
+  magiskLåda.classList.add("magisk-låda-röd");
+});
+
+console.log(magiskLåda.classList);
