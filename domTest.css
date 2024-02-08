@@ -1,4 +1,18 @@
 .magisk-låda {
+<<<<<<< HEAD
     height: 100px;
     width: 100px;
 }
+=======
+  height: 100px;
+  width: 100px;
+}
+.magisk-låda-röd {
+  background-color: red;
+}
+.magisk-låda-grön {
+  background-color: green;
+  height: 200px;
+  width: 200px;
+}
+>>>>>>> 752bf0be94ddbce377c0cb119ff12a17d2741f8e
